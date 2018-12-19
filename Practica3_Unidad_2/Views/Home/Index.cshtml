@@ -1,0 +1,19 @@
+﻿
+@model IEnumerable< Practica3_Unidad_2.Models.Persona>
+
+<h2> LISTADO DE PERSONAS </h2>
+
+<div>
+@{
+    var grid = new WebGrid(Model, defaultSort: "Apellido");
+}
+
+    @grid.GetHtml(columns:grid.Columns(
+    grid.Column("Nombre",   header:   "Nombre"),
+    grid.Column("Apellido", header:   "Apellido"),
+    grid.Column("Telefono", header:   "Telefono"),
+    grid.Column("Id",       header:   "Id")
+
+    ))
+    </div>
+
